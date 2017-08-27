@@ -1,13 +1,13 @@
 int cols, rows;
 int scl = 50;
-int w = 3800;
-int h = 3600;
+int w = 1652;
+int h = 2908;
 
 float flying = 0;
 float[][] terrain;
 
 void setup() {
-  size(1080, 720, P3D);
+  size(852, 2908, P3D);
   //fullScreen(P3D);
   smooth();
   pixelDensity(2);
@@ -31,13 +31,13 @@ void draw() {
     yoff += 0.2;
   }
   
-   background(0); 
-   stroke(255,69,0);
+   background(17, 18, 16); 
+   stroke(245, 244, 236);
    noFill();  
    
    translate(width / 2, height / 2);
    rotateX(PI/3);
-   translate(-w / 2, -h / 2);
+   translate(-w / 2, -h / 3);
    
    for (int y = 0; y < rows-1; y++) {
      beginShape(TRIANGLE_STRIP);
@@ -49,5 +49,5 @@ void draw() {
    }
    
    // Tif is faster.
-   //saveFrame("frames/####.png");
+   saveFrame("frames/####.png");
 }
